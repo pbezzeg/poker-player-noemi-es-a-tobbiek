@@ -1,10 +1,10 @@
 
 class Player:
-    VERSION = "1.1"
+    VERSION = "1.1.2"
 
     def betRequest(self, game_state):
         
-        return 100
+        return 1
 
     def showdown(self, game_state):
         pass
