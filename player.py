@@ -3,9 +3,11 @@ import sys
 
 
 class Player:
-    VERSION = "2.1.8"
+    VERSION = "2.1.9"
 
     def betRequest(self, game_state):
+        return 0
+
         position = game_state["in_action"]
         players = game_state["players"]
         community_cards = game_state["community_cards"]
@@ -118,7 +120,6 @@ class Player:
         #allin()
         #scheck_our_pairs()
 
-        return 0
 
     def showdown(self, game_state):
         pass
