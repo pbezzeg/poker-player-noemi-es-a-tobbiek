@@ -116,8 +116,8 @@ class Player:
 
         print("asd" + str(community_cards), file=sys.stderr)
         print("asd" + community_cards[0]['rank'], file=sys.stderr)
-        #allin()
-        #scheck_our_pairs()
+        allin()
+        check_our_pairs()
         return 0
 
     def showdown(self, game_state):
