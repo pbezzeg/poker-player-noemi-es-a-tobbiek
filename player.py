@@ -1,6 +1,6 @@
 
 class Player:
-    VERSION = "1.1.3"
+    VERSION = "1.1.4"
 
     def betRequest(self, game_state):
 
@@ -10,7 +10,7 @@ class Player:
             for player in players:
                 if player["id"] == position:
                     return player["hole_cards"]
-        print owncard()
+        print "kartyaink" + owncard()
         return 1
 
     def showdown(self, game_state):
