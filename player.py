@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "2.1.4"
+    VERSION = "2.1.5"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
@@ -115,10 +115,10 @@ class Player:
 
         print("asd" + str(community_cards), file=sys.stderr)
         print("asd" + community_cards[0]['rank'], file=sys.stderr)
-        allin()
-        check_our_pairs()
+        #allin()
+        #check_our_pairs()
 
-        return 1
+        return 100
 
     def showdown(self, game_state):
         pass
