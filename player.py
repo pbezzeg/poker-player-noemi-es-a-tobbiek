@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "2.1.2"
+    VERSION = "2.1.3"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
@@ -23,6 +23,7 @@ class Player:
                     return 50
 
         def allin():
+            our_money = 0
             for player in players:
                 if player["id"] == position:
                     our_money = player["stack"]
@@ -114,6 +115,7 @@ class Player:
 
         print("asd" + str(community_cards), file=sys.stderr)
         print("asd" + community_cards[0]['rank'], file=sys.stderr)
+        allin()
         check_our_pairs()
 
         return 1
