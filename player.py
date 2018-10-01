@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "2.1.3"
+    VERSION = "2.1.4"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
@@ -14,12 +14,12 @@ class Player:
             first_card = own_card(0)
             second_card = own_card(1)
             if first_card == second_card:
-                print("pair in hand")
+                print("pair in hand", file=sys.stderr)
                 return 100
 
             for community_card in community_cards:
                 if (community_card['rank'] == first_card["rank"]) or (community_card['rank'] == second_card["rank"]):
-                    print("pair with desk")
+                    print("pair with desk", file=sys.stderr)
                     return 50
 
         def allin():
