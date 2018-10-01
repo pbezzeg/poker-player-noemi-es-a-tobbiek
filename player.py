@@ -1,6 +1,7 @@
-
+from __future__ import print_function
+import sys
 class Player:
-    VERSION = "1.1.4"
+    VERSION = "1.1.5"
 
     def betRequest(self, game_state):
 
@@ -10,8 +11,7 @@ class Player:
             for player in players:
                 if player["id"] == position:
                     return player["hole_cards"]
-        print "kartyaink" + owncard()
-        return 1
+        print("Tesztecske"+ owncard(), file=sys.stderr)
 
     def showdown(self, game_state):
         pass
