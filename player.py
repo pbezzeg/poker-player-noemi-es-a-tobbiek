@@ -18,7 +18,7 @@ class Player:
                 return 100
 
             for community_card in community_cards:
-                if (community_card['rank'] == first_card["rank"]) or (community_card['rank'] == second_card["rank"]):
+                if (community_card[0]['rank'] == first_card["rank"]) or (community_card[0]['rank'] == second_card["rank"]):
                     print("pair with desk")
                     return 50
 
@@ -30,7 +30,7 @@ class Player:
 
         print("asd" + str(own_card(0)), file=sys.stderr)
         print("asd" + str(community_cards), file=sys.stderr)
-        print("asd" + str(community_cards['rank']), file=sys.stderr)
+        print("asd" + str(community_cards[0]['rank']), file=sys.stderr)
 
         check_our_pairs()
 
