@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "2.1"
+    VERSION = "2.1.1"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
@@ -100,7 +100,8 @@ class Player:
                 return 1
             elif number >= 20:
                 return 2
-            elif number >=
+            elif number >= 15:
+                return 0
 
         def own_card(card):
             for player in players:
@@ -113,8 +114,7 @@ class Player:
 
         print("asd" + str(community_cards), file=sys.stderr)
         print("asd" + community_cards[0]['rank'], file=sys.stderr)
-
-        allin()
+        allin(  )
         check_our_pairs()
 
         return 1
