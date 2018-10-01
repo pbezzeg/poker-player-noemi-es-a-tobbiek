@@ -22,6 +22,20 @@ class Player:
                     print("pair with desk", file=sys.stderr)
                     return 50
 
+
+        def allin():
+            our_money = 0
+            for player in players:
+                if player["id"] == position:
+                    our_money = player["stack"]
+
+            for player in players:
+                if (our_money < player["stack"]) and game_state["round"] > 0:
+                    break
+                else:
+                    return int(our_money)
+
+
         def own_card(card):
             for player in players:
                 if player["id"] == position:
@@ -30,7 +44,9 @@ class Player:
 
         print("asd" + str(own_card(0)), file=sys.stderr)
         print("asd" + str(own_card(1)), file=sys.stderr)
-        
+
+
+        allin()
         check_our_pairs()
         return 1000
 
