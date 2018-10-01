@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "2.1.5"
+    VERSION = "2.1.6"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
@@ -32,7 +32,7 @@ class Player:
                 if (our_money < player["stack"]) and game_state["round"] > 0:
                     break
                 else:
-                    return our_money
+                    return int(our_money)
 
 
         def ranksystem():
@@ -118,7 +118,7 @@ class Player:
         #allin()
         #check_our_pairs()
 
-        return 100
+        return 1000
 
     def showdown(self, game_state):
         pass
