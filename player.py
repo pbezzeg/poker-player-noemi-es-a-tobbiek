@@ -3,24 +3,33 @@ import sys
 
 
 class Player:
-    VERSION = "1.2.1"
+    VERSION = "2.0"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
         players = game_state["players"]
+        community_cards = game_state["community_cards"]
 
         def check_our_pairs():
-            pass
+            first_card = own_card(0)
+            second_card = own_card(1)
+            if first_card == second_card:
+                return 100
 
-        def own_card():
+            for community_card in community_cards:
+                if (community_card['rank'] == first_card["rank"]) or (community_card['rank'] == second_card["rank"]):
+                    return 50
+
+        def own_card(card):
             for player in players:
                 if player["id"] == position:
-                    return player["hole_cards"]
+                    cards = player["hole_cards"]
+                    return cards[card]
 
-        print("asd" + str(own_card()), file=sys.stderr)
+        print("asd" + str(own_card(0)+ own_card(1)), file=sys.stderr)
+        check_our_pairs()
 
         return 1
-    
+
     def showdown(self, game_state):
         pass
-
