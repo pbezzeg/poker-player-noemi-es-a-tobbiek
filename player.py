@@ -3,11 +3,18 @@ import sys
 
 
 class Player:
-    VERSION = "1.1.9"
+    VERSION = "1.2.0"
 
     def betRequest(self, game_state):
 
-        print("asd", file=sys.stderr)
+        def owncard():
+            position = game_state["in_action"]
+            players = game_state["players"]
+            for player in players:
+                if player["id"] == position:
+                    return player["hole_cards"]
+
+        print("asd" + owncard(), file=sys.stderr)
 
         return 1
     
