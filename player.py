@@ -29,6 +29,8 @@ class Player:
                     return cards[card]
 
         print("asd" + str(own_card(0)), file=sys.stderr)
+        print("asd" + str(own_card(1)), file=sys.stderr)
+
         print("asd" + str(community_cards), file=sys.stderr)
         print("asd" + community_cards[0]['rank'], file=sys.stderr)
 
