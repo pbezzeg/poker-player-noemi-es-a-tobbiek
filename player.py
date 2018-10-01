@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "4"
+    VERSION = "4.0"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
@@ -42,7 +42,7 @@ class Player:
         print("asd" + str(own_card(1)), file=sys.stderr)
 
 
-        if check_our_pairs() > 49:
+        if check_our_pairs() > 0:
             return check_our_pairs()
         return 0
 
