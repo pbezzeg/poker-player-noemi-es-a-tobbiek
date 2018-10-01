@@ -15,7 +15,7 @@ class Player:
         def own_card():
             for player in players:
                 if player["id"] == position:
-                    return player["name"]
+                    return player["hole_cards"]
 
         print("asd" + str(own_card()), file=sys.stderr)
 
