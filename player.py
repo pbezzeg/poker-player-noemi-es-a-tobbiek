@@ -12,7 +12,7 @@ class Player:
             players = game_state["players"]
             for player in players:
                 if player["id"] == position:
-                    return player["hole_cards"]
+                    return player["name"]
 
         print("asd" + str(owncard()), file=sys.stderr)
 
