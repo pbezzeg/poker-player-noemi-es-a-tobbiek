@@ -3,7 +3,7 @@ import sys
 
 
 class Player:
-    VERSION = "3.2"
+    VERSION = "3.7"
 
     def betRequest(self, game_state):
         position = game_state["in_action"]
