@@ -26,7 +26,7 @@ class Player:
                     cards = player["hole_cards"]
                     return cards[card]
 
-        print("asd" + str(own_card(0)+ own_card(1)), file=sys.stderr)
+        print("asd" + str(own_card(0)), file=sys.stderr)
         check_our_pairs()
 
         return 1
