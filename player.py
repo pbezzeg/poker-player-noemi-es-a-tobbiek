@@ -6,15 +6,18 @@ class Player:
     VERSION = "1.2.1"
 
     def betRequest(self, game_state):
+        position = game_state["in_action"]
+        players = game_state["players"]
 
-        def owncard():
-            position = game_state["in_action"]
-            players = game_state["players"]
+        def check_our_pairs():
+            pass
+
+        def own_card():
             for player in players:
                 if player["id"] == position:
                     return player["name"]
 
-        print("asd" + str(owncard()), file=sys.stderr)
+        print("asd" + str(own_card()), file=sys.stderr)
 
         return 1
     
